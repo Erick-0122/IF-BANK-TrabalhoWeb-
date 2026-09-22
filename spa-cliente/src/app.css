@@ -1,0 +1,50 @@
+:root {
+  --ink: #0d1b16;
+  --paper: #f6f5f1;
+  --card: #ffffff;
+  --green: #0f5132;
+  --green-soft: #e3efe8;
+  --red: #9f1239;
+  --line: #e3e1da;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); }
+
+.app { max-width: 720px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.brand { font-weight: 650; letter-spacing: -0.02em; }
+.brand span { color: var(--green); }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+
+.balance { font-size: 2.25rem; font-weight: 600; letter-spacing: -0.03em; margin: 0.25rem 0 0; }
+.muted { color: #6b7280; font-size: 0.875rem; margin: 0; }
+
+nav.tabs { display: flex; gap: 0.25rem; margin-bottom: 1.25rem; }
+nav.tabs button { flex: 1; padding: 0.6rem; border: 1px solid var(--line); background: var(--card); border-radius: 8px; cursor: pointer; font-size: 0.875rem; }
+nav.tabs button[aria-current="page"] { background: var(--green); color: #fff; border-color: var(--green); }
+
+label { display: block; font-size: 0.8125rem; margin-bottom: 0.25rem; }
+input, select { width: 100%; padding: 0.55rem 0.7rem; border: 1px solid var(--line); border-radius: 8px; font-size: 0.9375rem; background: #fff; }
+.field { margin-bottom: 0.9rem; }
+.row { display: flex; gap: 0.75rem; }
+.row > * { flex: 1; }
+
+button.primary { background: var(--green); color: #fff; border: 0; border-radius: 8px; padding: 0.65rem 1.1rem; font-size: 0.9375rem; cursor: pointer; }
+button.primary:disabled { opacity: 0.55; cursor: progress; }
+button.ghost { background: none; border: 1px solid var(--line); border-radius: 8px; padding: 0.4rem 0.8rem; cursor: pointer; }
+
+.alert { border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.875rem; margin-bottom: 1rem; }
+.alert.error { background: #fdeaef; color: var(--red); }
+.alert.ok { background: var(--green-soft); color: var(--green); }
+.alert.blocked { background: #fdeaef; color: var(--red); border: 1px solid #f3c4d1; }
+
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line); }
+ul.list li:first-child { border-top: 0; }
+.amount.credit { color: var(--green); font-weight: 600; }
+.amount.debit { color: var(--red); font-weight: 600; }
